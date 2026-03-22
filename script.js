@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const nav = document.getElementById("mainNav");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const mobileMenuLinks = document.querySelectorAll(".offcanvas-nav-link[href^='#']");
   const form = document.getElementById("contactForm");
   const submitBtn = document.getElementById("submitBtn");
   const submitText = document.getElementById("submitText");
@@ -6,6 +9,46 @@ document.addEventListener("DOMContentLoaded", () => {
   const successAlert = document.getElementById("formSuccess");
   const toastElement = document.getElementById("mainToast");
   const toastMsg = document.getElementById("toastMsg");
+
+  const scrollToSection = (selector) => {
+    const target = document.querySelector(selector);
+
+    if (!target) {
+      return;
+    }
+
+    const navOffset = nav ? nav.offsetHeight + 12 : 0;
+    const targetPosition = target.getBoundingClientRect().top + window.scrollY - navOffset;
+
+    window.scrollTo({
+      top: targetPosition,
+      behavior: "smooth",
+    });
+  };
+
+  if (mobileMenu && window.bootstrap) {
+    const mobileOffcanvas = bootstrap.Offcanvas.getOrCreateInstance(mobileMenu);
+
+    mobileMenuLinks.forEach((link) => {
+      link.addEventListener("click", (event) => {
+        const targetSelector = link.getAttribute("href");
+
+        if (!targetSelector) {
+          return;
+        }
+
+        event.preventDefault();
+        mobileMenu.addEventListener(
+          "hidden.bs.offcanvas",
+          () => {
+            scrollToSection(targetSelector);
+          },
+          { once: true }
+        );
+        mobileOffcanvas.hide();
+      });
+    });
+  }
 
   if (!form || !submitBtn || !submitText || !submitSpinner || !successAlert) {
     return;
