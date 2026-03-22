@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pablo Sáez — Portfolio</title>
+  <meta name="description" content="Portfolio de Pablo Sáez, estudiante de Ingeniería Informática especializado en Data Science e Inteligencia Artificial." />
+
+  <!-- Google Fonts: Lora + DM Sans + DM Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- =============================================
+       NAVBAR
+       ============================================= -->
+  <nav class="navbar navbar-expand-lg" id="mainNav" aria-label="Navegación principal">
+    <div class="container">
+
+      <a class="navbar-brand" href="#inicio">Pablo<span>.</span></a>
+
+      <!-- Botón menú móvil -->
+      <button
+        class="navbar-toggler d-lg-none"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#mobileMenu"
+        aria-controls="mobileMenu"
+        aria-label="Abrir menú"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Menú escritorio -->
+      <div class="collapse navbar-collapse justify-content-end" id="navContent">
+        <ul class="navbar-nav gap-1">
+          <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
+          <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#habilidades">Habilidades</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <!-- =============================================
+       OFFCANVAS — Menú móvil
+       ============================================= -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="mobileMenuLabel">Pablo Sáez</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+    </div>
+    <div class="offcanvas-body">
+      <a class="offcanvas-nav-link" href="#sobre-mi"    data-bs-dismiss="offcanvas">Sobre mí</a>
+      <a class="offcanvas-nav-link" href="#proyectos"   data-bs-dismiss="offcanvas">Proyectos</a>
+      <a class="offcanvas-nav-link" href="#habilidades" data-bs-dismiss="offcanvas">Habilidades</a>
+      <a class="offcanvas-nav-link" href="#contacto"    data-bs-dismiss="offcanvas">Contacto</a>
+    </div>
+  </div>
+
+
+  <!-- =============================================
+       HERO
+       ============================================= -->
+  <section class="hero" id="inicio" aria-label="Presentación">
+
+    <div class="container position-relative">
+      <div class="row align-items-center gy-5">
+
+        <!-- Columna texto -->
+        <div class="col-lg-7">
+
+          
+          <h1><span>Pablo Sáez</span></h1>
+
+          <p class="hero-subtitle">
+            Estudiante de Ingeniería Informática con foco en
+            <strong>Inteligencia Artificial</strong> y <strong>Deep Learning</strong>.
+            Actualmente desarrollando mi TFG sobre meta-aprendizaje.
+          </p>
+
+          <div class="hero-actions d-flex flex-wrap gap-3">
+            <a href="#proyectos" class="btn-teal">
+              <i class="bi bi-grid-1x2-fill" aria-hidden="true"></i> Ver proyectos
+            </a>
+            <a href="#contacto" class="btn-ghost">
+              <i class="bi bi-envelope" aria-hidden="true"></i> Contactar
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Columna avatar -->
+        <div class="col-lg-5">
+          <div class="hero-visual">
+            <div class="hero-avatar" aria-label="Foto de Pablo Sáez">
+              <img src="foto_graduacion.jpeg" alt="Foto de Pablo Sáez" />
+            </div>
+            <aside class="hero-note" aria-label="Resumen del perfil">
+              <span class="hero-note-label">Actualmente</span>
+              <strong>Formándome en IA y Deep Learning, TFG en marcha</strong>
+              <span>Actitud incansable para el aprendizaje y pasión por crear soluciones innovadoras.</span>
+            </aside>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       SOBRE MÍ
+       ============================================= -->
+  <section class="section" id="sobre-mi" aria-labelledby="titulo-sobre-mi">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+
+          <p class="section-label">Sobre mí</p>
+          <h2 id="titulo-sobre-mi">Un poco de contexto</h2>
+
+          <div class="about-text">
+
+            <p>
+              Reúno una combinación poco común: una base sólida en <strong>Ingeniería Informática</strong>,
+              muy buen rendimiento académico y una forma de pensar analítica, junto con un perfil
+              extrovertido y cómodo en la interacción con otras personas. El ajedrez, en el que tengo 1600 de ELO (percentil 98), presente en mi
+              vida desde los 8 años, me ha dado paciencia, estrategia y criterio para decidir; y mi
+              experiencia de <strong>Erasmus</strong> me ha permitido trabajar en proyectos de grupo
+              dentro de entornos internacionales y multiculturales con naturalidad.
+            </p>
+
+            <div class="about-grid">
+              <article class="about-panel about-panel-main">
+                <span class="about-panel-kicker"><i class="bi bi-laptop" aria-hidden="true"></i> Perfil técnico</span>
+                <h3>Ingeniería, análisis y ambición académica</h3>
+                <p>
+                  Buenas notas, mentalidad estructurada e interés en el aprendizaje continuo, siempre busco 
+                  expandir mi conocimiento hacia las áreas y herramientas más útiles.
+                  
+                </p>
+              </article>
+
+              <article class="about-panel">
+                <span class="about-panel-kicker"><i class="bi bi-trophy" aria-hidden="true"></i> Ajedrez</span>
+                <h3>Pienso antes de mover</h3>
+                <p>
+                  Jugar desde pequeño me ha enseñado a decidir con calma, anticipar escenarios y no
+                  perder claridad cuando el contexto se complica.
+                </p>
+              </article>
+
+              <article class="about-panel about-panel-accent">
+                <span class="about-panel-kicker"><i class="bi bi-globe2" aria-hidden="true"></i> Entorno internacional</span>
+                <h3>Trabajo bien con perfiles distintos</h3>
+                <p>
+                  Erasmus,experiencia en trabajo en grupo en equipos multiculturales y entornos
+                  exigentes, hablando inglés e italiano.
+                </p>
+              </article>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       PROYECTOS
+       ============================================= -->
+  <section class="section section-alt" id="proyectos" aria-labelledby="titulo-proyectos">
+    <div class="container">
+
+      <p class="section-label">Proyectos</p>
+      <h2 id="titulo-proyectos">Lo que he construido</h2>
+
+      <div class="row g-4 align-items-stretch">
+
+        <!-- Proyecto 1: TensorFlow -->
+        <div class="col-lg-7">
+          <article
+            class="project-card project-card-featured"
+            role="button"
+            tabindex="0"
+            aria-label="Ver detalles del proyecto TensorFlow"
+            data-bs-toggle="modal"
+            data-bs-target="#modalTensorFlow"
+          >
+            <span class="project-number" aria-hidden="true">01</span>
+            <div class="project-card-header">
+              <div class="project-icon project-icon-ai">
+                <i class="bi bi-bounding-box-circles" aria-hidden="true"></i>
+              </div>
+              <span class="project-status status-done">Completado</span>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-title">Clasificación de imágenes con TensorFlow</h3>
+              <p class="project-desc">
+                Desarrollo de un modelo de visión por computador para clasificación de imágenes
+                usando TensorFlow. El proyecto incluyó preparación de datos, entrenamiento,
+                validación y comparación de métricas para mejorar la capacidad de generalización.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">TensorFlow</span>
+                <span class="project-tag">Python</span>
+                <span class="project-tag">Deep Learning</span>
+                <span class="project-tag">Computer Vision</span>
+              </div>
+            </div>
+            <span class="project-line" aria-hidden="true"></span>
+          </article>
+        </div>
+
+        <!-- Proyecto 2: TFG -->
+        <div class="col-lg-5">
+          <article
+            class="project-card"
+            role="button"
+            tabindex="0"
+            aria-label="Ver detalles del TFG"
+            data-bs-toggle="modal"
+            data-bs-target="#modalTFG"
+          >
+            <span class="project-number" aria-hidden="true">02</span>
+            <div class="project-card-header">
+              <div class="project-icon project-icon-meta">
+                <i class="bi bi-cpu" aria-hidden="true"></i>
+              </div>
+              <span class="project-status status-wip">En desarrollo</span>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-title">TFG: Meta-featuring para Meta-aprendizaje</h3>
+              <p class="project-desc">
+                Trabajo de Fin de Grado centrado en la extracción automática de meta-features
+                para sistemas de meta-aprendizaje. El objetivo es mejorar la selección automática
+                de algoritmos y configuraciones para nuevos problemas de clasificación.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Meta-learning</span>
+                <span class="project-tag">Python</span>
+                <span class="project-tag">scikit-learn</span>
+                <span class="project-tag">Pymfe</span>
+              </div>
+            </div>
+            <span class="project-line" aria-hidden="true"></span>
+          </article>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       HABILIDADES
+       ============================================= -->
+  <section class="section" id="habilidades" aria-labelledby="titulo-habilidades">
+    <div class="container">
+
+      <p class="section-label">Habilidades</p>
+      <h2 id="titulo-habilidades">Tecnologías y herramientas</h2>
+
+      <div class="row g-5">
+
+        <!-- Barras de progreso -->
+        <div class="col-lg-5">
+          <p class="skill-group-title">Tecnologías</p>
+
+          <div class="skill-list" aria-label="Tecnologías principales">
+            <div class="skill-item">
+              <span class="skill-name">
+                <i class="bi bi-check-circle-fill skill-check" aria-hidden="true"></i>
+                <i class="bi bi-filetype-py" aria-hidden="true"></i>
+                Python
+              </span>
+            </div>
+
+            <div class="skill-item">
+              <span class="skill-name">
+                <i class="bi bi-check-circle-fill skill-check" aria-hidden="true"></i>
+                <i class="bi bi-database" aria-hidden="true"></i>
+                SQL
+              </span>
+            </div>
+
+            <div class="skill-item">
+              <span class="skill-name">
+                <i class="bi bi-check-circle-fill skill-check" aria-hidden="true"></i>
+                <i class="bi bi-git" aria-hidden="true"></i>
+                Git / GitHub
+              </span>
+            </div>
+
+            <div class="skill-item">
+              <span class="skill-name">
+                <i class="bi bi-check-circle-fill skill-check" aria-hidden="true"></i>
+                <i class="bi bi-window-stack" aria-hidden="true"></i>
+                Django
+              </span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Badges y áreas -->
+        <div class="col-lg-7">
+
+          <p class="skill-group-title">Librerías y herramientas</p>
+          <div class="tech-grid">
+            <span class="tech-badge"><i class="bi bi-graph-up" aria-hidden="true"></i> scikit-learn</span>
+            <span class="tech-badge"><i class="bi bi-table" aria-hidden="true"></i> Pandas</span>
+            <span class="tech-badge"><i class="bi bi-bar-chart" aria-hidden="true"></i> Matplotlib</span>
+            <span class="tech-badge"><i class="bi bi-cpu" aria-hidden="true"></i> NumPy</span>
+            <span class="tech-badge"><i class="bi bi-braces" aria-hidden="true"></i> TensorFlow</span>
+          </div>
+
+          <p class="skill-group-title mt-4">Áreas de conocimiento</p>
+          <div class="skill-cards">
+            <article class="skill-card">
+              <div class="skill-card-top">
+                <h3>Machine Learning</h3>
+                <span class="skill-meter"><span style="width: 82%;"></span></span>
+              </div>
+              <p>
+                Clasificación, regresión y clustering con experiencia en preprocesamiento,
+                selección de modelos y validación cruzada.
+              </p>
+              <div class="skill-tags">
+                <span class="skill-tag">scikit-learn</span>
+                <span class="skill-tag">Validación</span>
+                <span class="skill-tag">Modelado</span>
+              </div>
+            </article>
+
+            <article class="skill-card">
+              <div class="skill-card-top">
+                <h3>Deep Learning</h3>
+                <span class="skill-meter"><span style="width: 76%;"></span></span>
+              </div>
+              <p>
+                Trabajo con TensorFlow, datasets y métricas para entrenar modelos con buen
+                rendimiento y capacidad de generalización.
+              </p>
+              <div class="skill-tags">
+                <span class="skill-tag">TensorFlow</span>
+                <span class="skill-tag">Métricas</span>
+                <span class="skill-tag">Experimentación</span>
+              </div>
+            </article>
+
+            <article class="skill-card">
+              <div class="skill-card-top">
+                <h3>Desarrollo web</h3>
+                <span class="skill-meter"><span style="width: 71%;"></span></span>
+              </div>
+              <p>
+                Desarrollo con Django y Python, estructuración de proyectos, backend y buenas
+                bases de ingeniería de software.
+              </p>
+              <div class="skill-tags">
+                <span class="skill-tag">Django</span>
+                <span class="skill-tag">Backend</span>
+                <span class="skill-tag">Arquitectura</span>
+              </div>
+            </article>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       CONTACTO
+       ============================================= -->
+  <section class="section section-contact" id="contacto" aria-labelledby="titulo-contacto">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+
+          <p class="section-label">Contacto</p>
+          <h2 id="titulo-contacto">Hablemos</h2>
+
+          <div class="row g-4 align-items-start">
+
+            <!-- Información de contacto -->
+            <div class="col-md-4">
+              <div class="contact-note">
+                <i class="bi bi-chat-square-text-fill" aria-hidden="true"></i>
+                <div>
+                  <span class="contact-note-label">Disponible para conversar</span>
+                  <strong>Proyectos, prácticas o colaboraciones con recorrido.</strong>
+                </div>
+              </div>
+              <p class="contact-intro">
+                ¿Tienes alguna pregunta sobre mis proyectos o te interesa colaborar?
+                Estaré encantado de responder.
+              </p>
+              <ul class="contact-info-list list-unstyled">
+                <li class="contact-info-item">
+                  <i class="bi bi-mortarboard-fill" aria-hidden="true"></i>
+                  <span>Grado en Ing. Informática — Sistemas de Información</span>
+                </li>
+                <li class="contact-info-item">
+                  <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+                  <span>España</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Formulario -->
+            <div class="col-md-8">
+              <div class="contact-form-wrap">
+
+                <div id="formSuccess" class="alert d-none" role="alert">
+                  <i class="bi bi-check-circle-fill me-2" aria-hidden="true"></i>
+                  Mensaje enviado. ¡Gracias por escribir!
+                </div>
+
+                <form id="contactForm" novalidate>
+                  <div class="row g-3">
+
+                    <div class="col-sm-6">
+                      <label for="inputNombre" class="form-label">Nombre</label>
+                      <input type="text" id="inputNombre" name="nombre" class="form-control" placeholder="Tu nombre" required minlength="2" aria-required="true" />
+                      <div class="invalid-feedback">Introduce tu nombre.</div>
+                    </div>
+
+                    <div class="col-sm-6">
+                      <label for="inputEmail" class="form-label">Correo electrónico</label>
+                      <input type="email" id="inputEmail" name="email" class="form-control" placeholder="tu@email.com" required aria-required="true" />
+                      <div class="invalid-feedback">Introduce un email válido.</div>
+                    </div>
+
+                    <div class="col-12">
+                      <label for="inputAsunto" class="form-label">Asunto</label>
+                      <input type="text" id="inputAsunto" name="asunto" class="form-control" placeholder="¿De qué quieres hablar?" required minlength="3" aria-required="true" />
+                      <div class="invalid-feedback">Indica el asunto del mensaje.</div>
+                    </div>
+
+                    <div class="col-12">
+                      <label for="inputMensaje" class="form-label">Mensaje</label>
+                      <textarea id="inputMensaje" name="mensaje" class="form-control" rows="4" placeholder="Cuéntame lo que necesites..." required minlength="10" aria-required="true"></textarea>
+                      <div class="invalid-feedback">El mensaje debe tener al menos 10 caracteres.</div>
+                    </div>
+
+                    <div class="col-12">
+                      <button type="submit" id="submitBtn" class="btn-teal w-100">
+                        <span id="submitText">
+                          <i class="bi bi-send" aria-hidden="true"></i> Enviar mensaje
+                        </span>
+                        <span id="submitSpinner" class="d-none">
+                          <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                          Enviando...
+                        </span>
+                      </button>
+                    </div>
+
+                  </div>
+                </form>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       FOOTER
+       ============================================= -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
+        <span class="footer-text">© 2026 Pablo Sáez. Portfolio académico.</span>
+        <div class="d-flex gap-3">
+          <a href="#inicio" class="footer-link">Inicio</a>
+          <a href="https://github.com/pablosaez21" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="GitHub de Pablo Sáez">
+            <i class="bi bi-github" aria-hidden="true"></i> GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- =============================================
+       MODAL — Proyecto Spark
+       ============================================= -->
+  <div class="modal fade" id="modalTensorFlow" tabindex="-1" aria-labelledby="modalTensorFlowLabel" aria-modal="true" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="d-flex align-items-center gap-3">
+            <div class="project-icon project-icon-ai">
+              <i class="bi bi-bounding-box-circles" aria-hidden="true"></i>
+            </div>
+            <h4 class="modal-title" id="modalTensorFlowLabel">Clasificación de imágenes con TensorFlow</h4>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <p class="modal-detail-value">
+            Este proyecto se ha colocado aquí como proyecto de prueba para la entrega, no es real, (aún).
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-ghost" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- =============================================
+       MODAL — TFG
+       ============================================= -->
+  <div class="modal fade" id="modalTFG" tabindex="-1" aria-labelledby="modalTFGLabel" aria-modal="true" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="d-flex align-items-center gap-3">
+            <div class="project-icon project-icon-meta">
+              <i class="bi bi-cpu" aria-hidden="true"></i>
+            </div>
+            <h4 class="modal-title" id="modalTFGLabel">TFG: Meta-featuring para Meta-aprendizaje</h4>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <p class="modal-detail-label">Contexto</p>
+          <p class="modal-detail-value">
+            El meta-aprendizaje busca que los sistemas de IA aprendan <em>cómo aprender</em> mejor,
+            usando el conocimiento acumulado de problemas anteriores para tomar mejores decisiones
+            en nuevos problemas. El TFG se centra en la pieza clave: los <strong>meta-features</strong>.
+          </p>
+          <p class="modal-detail-label">Enfoque</p>
+          <p class="modal-detail-value">
+            Extracción y selección automática de meta-features que describan las propiedades
+            estadísticas y estructurales de un dataset, con el objetivo de mejorar la recomendación
+            de algoritmos en sistemas AutoML.
+          </p>
+          <p class="modal-detail-label">Estado actual</p>
+          <p class="modal-detail-value">
+            <span class="project-status status-wip">En desarrollo</span> — Fase de experimentación
+            y validación de resultados.
+          </p>
+          <p class="modal-detail-label">Tecnologías</p>
+          <div class="project-tags">
+            <span class="project-tag">Python</span>
+            <span class="project-tag">scikit-learn</span>
+            <span class="project-tag">Pandas</span>
+            <span class="project-tag">Meta-learning</span>
+            <span class="project-tag">AutoML</span>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-ghost" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- =============================================
+       TOAST — Confirmación formulario
+       ============================================= -->
+  <div class="toast-container p-3" aria-live="polite" aria-atomic="true">
+    <div id="mainToast" class="toast align-items-center border-0" role="status">
+      <div class="d-flex">
+        <div class="toast-body" id="toastMsg"></div>
+        <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Cerrar"></button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Bootstrap 5.3 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Script propio -->
+  <script src="script.js"></script>
+
+</body>
+</html>
